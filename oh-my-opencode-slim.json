@@ -1,0 +1,48 @@
+{
+  "preset": "helios",
+  "presets": {
+    "helios": {
+      "superman": {
+        "model": "zai-coding-plan/glm-4.7",
+        "skills": [],
+        "mcps": []
+      },
+      "orchestrator": {
+        "model": "github-copilot/claude-opus-4.5",
+        "skills": ["*"],
+        "variant": "medium",
+        "mcps": ["websearch"]
+      },
+      "oracle": {
+        "model": "google/gemini-3-pro",
+        "variant": "high",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "google/gemini-3-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "google/gemini-3-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "google/gemini-3-flash",
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "github-copilot/claude-sonnet-4.5",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    }
+  }
+}
