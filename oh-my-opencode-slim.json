@@ -8,37 +8,47 @@
         "mcps": []
       },
       "orchestrator": {
-        "model": "github-copilot/claude-opus-4.5",
-        "skills": ["*"],
-        "variant": "medium",
-        "mcps": ["websearch"]
+        "model": "github-copilot/claude-opus-4.6",
+        "skills": [
+          "*"
+        ],
+        "variant": "high",
+        "mcps": [
+          "websearch"
+        ]
       },
       "oracle": {
-        "model": "google/gemini-3-pro",
-        "variant": "high",
+        "model": "github-copilot/gpt-5.2-codex",
+        "variant": "medium",
         "skills": [],
         "mcps": []
       },
       "librarian": {
-        "model": "google/gemini-3-flash",
+        "model": "zai-coding-plan/glm-4.7",
         "variant": "low",
         "skills": [],
-        "mcps": ["websearch", "context7", "grep_app"]
+        "mcps": [
+          "websearch",
+          "context7",
+          "grep_app"
+        ]
       },
       "explorer": {
-        "model": "google/gemini-3-flash",
+        "model": "zai-coding-plan/glm-4.7",
         "variant": "low",
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": "google/gemini-3-flash",
+        "model": "google/gemini-3-pro",
         "variant": "medium",
-        "skills": ["agent-browser"],
+        "skills": [
+          "agent-browser"
+        ],
         "mcps": []
       },
       "fixer": {
-        "model": "github-copilot/claude-sonnet-4.5",
+        "model": "github-copilot/gpt-5.2-codex",
         "variant": "low",
         "skills": [],
         "mcps": []
