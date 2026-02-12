@@ -2,7 +2,8 @@
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
     "oh-my-opencode-slim",
-    "opencode-antigravity-auth@latest"
+    "opencode-antigravity-auth@latest",
+    "./opencode-rate-limiter"
   ],
   "agent": {
     "explore": {
@@ -180,23 +181,6 @@
             }
           }
         },
-        "claude-opus-4-6": {
-          "name": "Claude Opus 4.6",
-          "limit": {
-            "context": 200000,
-            "output": 64000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
         "claude-opus-4-6-thinking": {
           "name": "Claude Opus 4.6 Thinking",
           "limit": {
@@ -232,40 +216,6 @@
       "models": {
         "claude-opus-4-5": {
           "name": "Claude Opus 4.5",
-          "limit": {
-            "context": 200000,
-            "output": 64000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "variants": {
-            "low": {
-              "thinkingConfig": {
-                "thinkingBudget": 8192
-              }
-            },
-            "medium": {
-              "thinkingConfig": {
-                "thinkingBudget": 16384
-              }
-            },
-            "max": {
-              "thinkingConfig": {
-                "thinkingBudget": 32768
-              }
-            }
-          }
-        },
-        "claude-opus-4-6": {
-          "name": "Claude Opus 4.6",
           "limit": {
             "context": 200000,
             "output": 64000
@@ -413,6 +363,16 @@
           }
         }
       }
+    }
+  },
+  "permission": {
+    "edit": "ask",
+    "bash": "ask"
+  },
+  "command": {
+    "current_task": {
+      "template": "please continue in current task id session",
+      "description": "continue task current"
     }
   }
 }
