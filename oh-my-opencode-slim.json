@@ -8,14 +8,24 @@
         "mcps": []
       },
       "orchestrator": {
-        "model": "google/claude-opus-4-6-thinking",
+        "model": "github-copilot/claude-opus-4.6",
         "skills": [
           "*"
         ],
-        "variant": "high",
+        "variant": "medium",
         "mcps": [
           "websearch"
-        ]
+        ],
+        "permission": {
+          "edit": [
+            "ask"
+          ],
+          "bash": {
+            "mkdir*": "ask",
+            "rm*": "ask",
+            "*": "allow"
+          }
+        }
       },
       "oracle": {
         "model": "github-copilot/gpt-5.2-codex",
