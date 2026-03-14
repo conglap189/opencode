@@ -403,6 +403,10 @@
     "current_task": {
       "template": "please continue in current task id session",
       "description": "continue task current"
+    },
+    "first_conversation": {
+      "template": "Greet the user at the start of the conversation. Then delegate only @orchestrator and continue using the existing task section/session to maintain continuity. Do not create a new task section unless the user explicitly asks to create a new task.",
+      "description": "greet and continue existing task"
     }
   }
 }

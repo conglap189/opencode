@@ -3,19 +3,29 @@
   "presets": {
     "helios": {
       "superman": {
-        "model": "minimax/MiniMax-M2.5",
+        "model": "zai-coding-plan/glm-4.7",
         "skills": [],
         "mcps": []
       },
       "orchestrator": {
-        "model": "openai/gpt-5.3-codex",
+        "model": "github-copilot/claude-opus-4.6",
         "skills": [
           "*"
         ],
         "variant": "medium",
         "mcps": [
           "websearch"
-        ]
+        ],
+        "permission": {
+          "edit": [
+            "ask"
+          ],
+          "bash": {
+            "mkdir*": "ask",
+            "rm*": "ask",
+            "*": "allow"
+          }
+        }
       },
       "oracle": {
         "model": "github-copilot/gpt-5.2-codex",
@@ -24,7 +34,7 @@
         "mcps": []
       },
       "librarian": {
-        "model": "minimax/MiniMax-M2.5",
+        "model": "zai-coding-plan/glm-4.7",
         "variant": "low",
         "skills": [],
         "mcps": [
@@ -34,7 +44,7 @@
         ]
       },
       "explorer": {
-        "model": "minimax/MiniMax-M2.5",
+        "model": "zai-coding-plan/glm-4.7",
         "variant": "low",
         "skills": [],
         "mcps": []
